@@ -14,6 +14,22 @@
 
 // a) Create a test with an expect statement using the variable provided.
 
+describe ("capital", () => {
+  it ("takes in an array of objects and returns an array with a sentence about each person with their name capitalized", () => {
+      expect(capital(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."])
+     
+      
+      
+      
+  })
+})
+
+// Good failure
+//   // Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 total
+// Snapshots:   0 total
+// Time:        0.162 s
+
 const people = [
   { name: "ford prefect", occupation: "a hitchhiker" },
   { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
@@ -21,11 +37,33 @@ const people = [
 ]
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is president of the galaxy.", "Arthur Dent is a radio employee."]
 
+'Ford Prefect is a a hitchhiker.',
+  'Zaphod Beeblebrox is a president of the galaxy.',
+  'Arthur Dent is a a radio employee.'
+
 // b) Create the function that makes the test pass.
+
+const capital= people =>
+  people.map(person => {
+  const name = person.name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+  const occupation = person.occupation + "."
+  return `${name} is a ${occupation}`;
+})
+
+// console.log (capital(people))
 
 // --------------------2) Create a function that takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.
 
 // a) Create a test with an expect statement using the variables provided.
+
+describe ("remainder", () => {
+    it ("takes in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3", () => {
+        expect(remainder(hodgepodge1)).toEqual([ 2, 0, -1, 0 ])
+        expect(remainder(hodgepodge2)).toEqual([ 2, 1, -1 ])
+        
+        
+    })
+  })
 
 const hodgepodge1 = [23, "Heyyyy!", 45, -10, 0, "Yo", false]
 // Expected output: [ 2, 0, -1, 0 ]
@@ -34,9 +72,29 @@ const hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
 
 // b) Create the function that makes the test pass.
 
+const remainder = (arr) => {
+  const numbers = arr.filter(element=>typeof element==="number")
+  const remainders = numbers.map(number=>number%3)
+  return remainders
+}
+
+// Test Passed
+
+
+
 // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 
 // a) Create a test with an expect statement using the variables provided.
+
+describe ("cubed", () => {
+  it ("takes in an array of numbers and returns the sum of all the numbers cubed", () => {
+      expect(cubed(cubeAndSum1)).toEqual(99)
+      expect(cubed(cubeAndSum2)).toEqual(1125)
+      
+      
+      
+  })
+})
 
 const cubeAndSum1 = [2, 3, 4]
 // Expected output: 99
@@ -44,3 +102,13 @@ const cubeAndSum2 = [0, 5, 10]
 // Expected output: 1125
 
 // b) Create the function that makes the test pass.
+
+const cubed = (array) =>{
+  sum = 0
+  for (let i=0; i<array.length; i++){
+    sum += Math.pow(array[i],3)
+  } 
+  return sum
+}
+
+//test passed
