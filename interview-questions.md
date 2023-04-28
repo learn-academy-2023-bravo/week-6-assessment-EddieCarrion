@@ -50,6 +50,7 @@ action: "GET" location: /students/2/edit
 This particular "Get" will allow the developer to look up and edit information related to a particular instance at ID:2
 
 action: "PATCH" location: /students/2
+Patch is a method that can be used to update information related to a particular instance. For example if you have an instance called "Book" and wanted to add another feature to highlight the length of the book, you could use the "Patch" method to do so.
 
 
 action: "DELETE" location: /students/2
@@ -57,3 +58,24 @@ action: "DELETE" location: /students/2
 The "delete" will get rid of all the information associate with the particular student at ID:2
 
 5. As a developer, you are making an application to manage your to do list. Create 10 user stories that will help you get your application started. Read more about [user stories](https://www.atlassian.com/agile/project-management/user-stories).
+
+1. Paul is a fitness trainer who needs to be able to track the completed workouts of his clients.
+
+2. Sarah is a teacher who needs to manage the time of each lesson to keep a balanced workflow.
+
+3. Danny is student who needs to be able to check off comepleted tasks to keep his work assignments organized
+
+4. Tim is a forgetful business man who needs notifications send to him to remind him of his meetings.
+
+5. Kelly is a stay at home mother who wants ideas for activities and needs templates that can help generate ideas and can be modified.
+
+6. Miguel has started his weight loss journey. He would like a emoji celebration each time he has compled a workout for positive feedback.
+
+7. Britney struggles with procastinationand needs a particular feature that will notify her as to what particular tasks are priority.
+
+8. Derek is a workaholic and needs an alarm to remind him when to stop working and take breaks.
+
+9. Michelle is a ceo of a fortune 500 company. She likes to get feedback and wants monthly reports that identify goals met versus taks not completed so she can make proper adjustments.
+
+10. Tony is a Sales manager and it is difficut for him to blance his personal emails along with his professional emails. He would like reminders throughout the day to set particular times to focus on those emails without distractions. 
+

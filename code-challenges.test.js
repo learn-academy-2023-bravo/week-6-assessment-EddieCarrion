@@ -42,13 +42,21 @@ const people = [
   'Arthur Dent is a a radio employee.'
 
 // b) Create the function that makes the test pass.
+// Process
+// Create a function called "capital" that takes in an object of arrays
+// Use the .map method to loop through the objects 
+// Then take the name of each person and split it into an array of characters
+// Then capitalize the first letter of the word using the .uppercase method
+// The join the remaining letters to join the capitalized letter to form our new words
+// Use string interpolation to return the desired statement
 
-const capital= people =>
+const capital= (people) => {
   people.map(person => {
-  const name = person.name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
-  const occupation = person.occupation + "."
-  return `${name} is a ${occupation}`;
-})
+    const name = person.name.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+    const occupation = person.occupation + "."
+    return `${name} is a ${occupation}`;
+  })
+}
 
 // console.log (capital(people))
 
@@ -71,6 +79,10 @@ const hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
 // Expected output: [ 2, 1, -1 ]
 
 // b) Create the function that makes the test pass.
+// Create a function called "remainder" that takes in a array of mixed data as a parameter
+// create a variable called "numbers" and use the .filter method to filter out integers only
+// create another variable called "remainders" and use the .map method to iterate through each number in the array and divide it by 3
+// Return the remainders
 
 const remainder = (arr) => {
   const numbers = arr.filter(element=>typeof element==="number")
@@ -102,6 +114,11 @@ const cubeAndSum2 = [0, 5, 10]
 // Expected output: 1125
 
 // b) Create the function that makes the test pass.
+
+// Create a function called "cubed" that takes in an array of numbers as a parameter
+// Initialize the sum at zero so the first index is added to something
+// create a for loop that will cube each number in the array and add them together
+// Return the sum
 
 const cubed = (array) =>{
   sum = 0
